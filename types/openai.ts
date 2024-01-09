@@ -9,6 +9,7 @@ export interface OpenAIModel {
 
 export enum OpenAIModelID {
   MISTRAL = 'mistral',
+  MIXTRAL = 'mixtral',
   CODELLAMA = 'code-llama',
 }
 
@@ -20,6 +21,12 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
   [OpenAIModelID.MISTRAL]: {
     id: OpenAIModelID.MISTRAL,
     name: 'mistral',
+    maxLength: 12000, // TODO: test
+    tokenLimit: 4000, // TODO: test
+  },
+  [OpenAIModelID.MIXTRAL]: {
+    id: OpenAIModelID.MIXTRAL,
+    name: 'mixtral',
     maxLength: 12000, // TODO: test
     tokenLimit: 4000, // TODO: test
   },
