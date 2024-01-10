@@ -11,6 +11,7 @@ export enum OpenAIModelID {
   MISTRAL = 'mistral',
   MIXTRAL = 'mixtral',
   CODELLAMA = 'code-llama',
+  DEEPSEEKCODER = 'deepseek-coder',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
@@ -33,6 +34,12 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
   [OpenAIModelID.CODELLAMA]: {
     id: OpenAIModelID.CODELLAMA,
     name: 'code-llama',
+    maxLength: 12000, // TODO: test
+    tokenLimit: 4000, // TODO: test
+  },
+  [OpenAIModelID.DEEPSEEKCODER]: {
+    id: OpenAIModelID.DEEPSEEKCODER,
+    name: 'deepseek-coder',
     maxLength: 12000, // TODO: test
     tokenLimit: 4000, // TODO: test
   },
